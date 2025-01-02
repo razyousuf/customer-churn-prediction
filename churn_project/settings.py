@@ -52,7 +52,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # 'django.middleware.csrf.CsrfViewMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Add this line for render static files like css.
 ]
+# Whitenoise settings
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'
 
@@ -125,8 +129,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 #STATIC_URL = 'static/'
+#STATIC_URL = '/static/'
+#STATICFILES_DIRS = [BASE_DIR / "churn_app/static"]
+# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "churn_app/static"]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Add this for deployment
+# Additional locations for static files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # Ensure you have this directory
+]
+
+# For serving static files in production
+DEBUG = False
 
 
 # Default primary key field type
