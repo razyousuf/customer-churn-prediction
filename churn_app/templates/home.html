@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block title %}Churn Prediction{% endblock %}
+
+{% block body %}
+<!-- Form -->
+<div class="formContainer">
+    <form method="POST" action="{% url 'predict' %}">
+        {% csrf_token %}
+    <div class="form-row flex-column">
+    <div class="form-row">
+        <div class="form-group col-md-2 mx-3">
+            <label for="tenure">{{ form.tenure.label }}</label>
+            {{ form.tenure }}
+        </div>
+        <div class="form-group col-md-2 mx-3">
+            <label for="monthlycharges">{{ form.monthlycharges.label }}</label>
+            {{ form.monthlycharges }}
+        </div>
+        <div class="form-group col-md-2 mx-3">
+            <label for="totalcharges">{{ form.totalcharges.label }}</label>
+            {{ form.totalcharges }}
+        </div>
+        <div class="form-group col-md-2 mx-3">
+            <label for="dependents">{{ form.dependents.label }}</label>
+            {{ form.dependents }}
+        </div>
+        <div class="form-group col-md-2 mx-3">
+            <label for="internetservice">{{ form.internetservice.label }}</label>
+            {{ form.internetservice }}
+        </div>
+    </div>
+    </div>
+    <!-- Second Column -->
+    <div class="form-row flex-column">
+    <div class="form-row">
+
+        <div class="form-group col-md-2 mx-3">
+            <label for="onlinesecurity">{{ form.onlinesecurity.label }}</label>
+            {{ form.onlinesecurity }}
+        </div>
+        <div class="form-group col-md-2 mx-3">
+            <label for="onlinebackup">{{ form.onlinebackup.label }}</label>
+            {{ form.onlinebackup }}
+        </div>
+        <div class="form-group col-md-2 mx-3">
+            <label for="deviceprotection">{{ form.deviceprotection.label }}</label>
+            {{ form.deviceprotection }}
+        </div>
+        <div class="form-group col-md-2 mx-3">
+            <label for="techsupport">{{ form.techsupport.label }}</label>
+            {{ form.techsupport }}
+        </div>
+        <div class="form-group col-md-2 mx-3">
+            <label for="onlinebackup">{{ form.streamingtv.label }}</label>
+            {{ form.streamingtv }}
+        </div>
+    </div>
+    </div>
+
+    <!-- Third Column -->
+    <div class="form-row flex-column">
+    <div class="form-row">
+        <div class="form-group col-md-2 mx-3">
+            <label for="deviceprotection">{{ form.streamingmovies.label }}</label>
+            {{ form.streamingmovies }}
+        </div>
+        <div class="form-group col-md-2 mx-3">
+            <label for="deviceprotection">{{ form.contract.label }}</label>
+            {{ form.contract }}
+        </div>
+        <div class="form-group col-md-2 mx-3">
+            <label for="techsupport">{{ form.paperlessbilling.label }}</label>
+            {{ form.paperlessbilling }}
+        </div>
+        <div class="form-group col-md-2 mx-3">
+            <label for="onlinebackup">{{ form.paymentmethod.label }}</label>
+            {{ form.paymentmethod }}
+        </div>
+    </div>
+    </div>
+ 
+            <div class="form-row">
+                <button type="submit" class="btn btn-primary" name="submit" id="submitbtn" value="predict">PREDICT</button>
+            </div>
+    </form>
+
+    <!-- Displaying prediction results -->
+    <div class="bottomContainer my-2">
+        <div class="outputWindow">
+            {% if output1 == "This customer is likely to churn!" %}
+                <div class="alert alert-danger" role="alert">
+                    {{ output1 }}
+                    {{ output2 }}
+                </div>
+            {% else %}
+                <div class="alert alert-success" role="alert">
+                    {{ output1 }}
+                    {{ output2 }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+{% endblock %}

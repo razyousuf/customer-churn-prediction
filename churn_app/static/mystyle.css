@@ -1,0 +1,114 @@
+
+.formContainer{
+    background-color: rgb(176, 215, 245);
+    align-items: left;
+    padding: 1%;
+    padding-left: 1%;
+    /* margin-right: 20%; */
+        
+}
+
+body{
+    background-color: rgb(26, 54, 78);
+}
+
+
+.nametext{
+    color: rgb(30, 31, 92);    
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    font-size: large;
+}
+
+.heading{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    color: rgb(253, 175, 41); /*rgb(14, 11, 10)*/
+    padding-left: 23%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.outputWindow{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 1%;
+    margin-left: 1%;
+    height: 1%;
+    width: 50%;
+}
+
+#submitbtn{
+    height: 0.5%;
+    margin-top: 2.6%;
+    margin-left: 5%;
+    background-color: red;
+}
+
+#submitbtn:hover{
+    background-color: brown;
+}
+
+
+input[type=text] {
+    width: 85%;
+    height: 4%;
+    padding: 15px 22px;
+    box-sizing: border-box;  
+    border: 2px solid #4d8ff1;
+    border-radius: 5px;
+}
+
+input[type=number]{
+    width: 100%;
+    height: 10%;
+    padding: 15px 7px;
+    box-sizing: border-box;  
+    border: 1.5px solid rgb(108, 100, 218);
+    border-radius: 5px;
+}
+
+.custom-select{
+    box-sizing: border-box;  
+    border: 1.5px solid rgb(108, 100, 218);
+    border-radius: 5px;
+}
+
+.alert.alert-danger{
+    box-sizing: border-box;  
+    border: 1.5px solid rgb(247, 8, 8);
+    border-radius: 5px;
+    font-size: large;
+}
+
+.alert.alert-success{
+    box-sizing: border-box;  
+    border: 1.5px solid rgb(78, 173, 94);
+    background-color: aquamarine;
+    border-radius: 5px;
+    font-size: large;
+}
+
+.navbar-brand-text{
+    color: white;
+    padding-right: 2%;
+    font-size: larger;
+}
+
+.nav-link-text, .nav-git-text{
+    color: white;
+    font-size: larger;
+}
+
+.navbar-brand-text:hover, .nav-link-text:hover{
+  
+    text-decoration: none;
+    color: rgb(0, 255, 34);
+}
+
+.nav-git-text:hover{
+    color: red;
+    text-decoration: none;
+    text-size-adjust:3;
+}
+
+
