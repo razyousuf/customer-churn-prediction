@@ -13,9 +13,8 @@ class CustomerForm(forms.Form):
     dependents = forms.ChoiceField(label='Dependents', choices=dependents_choices, required=True)
     
     internetservice_choices = [
-        ('no', '__________No_________'),
-        ('fiber_optic', 'Fiber_Optic'),
-        ('other', 'Other Service Type'),
+        ('fiber_optic', 'Fiber Optic'),
+        ('other', ' Other Service Type'),
     ]
     internetservice = forms.ChoiceField(label='Internet Service', choices=internetservice_choices, required=True)
     
