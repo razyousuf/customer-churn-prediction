@@ -15,7 +15,7 @@ class CustomerForm(forms.Form):
     internetservice_choices = [
         ('no', '__________No_________'),
         ('fiber_optic', 'Fiber_Optic'),
-        ('dsl', 'DSL'),
+        ('other', 'Other Service Type'),
     ]
     internetservice = forms.ChoiceField(label='Internet Service', choices=internetservice_choices, required=True)
     
@@ -62,7 +62,7 @@ class CustomerForm(forms.Form):
     contract_choices = [
        ('1_year', 'One Year'),
         ('2_year', 'Tow Years'),
-        ('monthly', 'Month-to-Month Contract')
+        ('monthly', ' Monthly Contracts.')
     ]
     contract = forms.ChoiceField(label='Contract', choices=contract_choices, required=True)
     
@@ -74,7 +74,7 @@ class CustomerForm(forms.Form):
     
     paymentmethod_choices = [
         ('electronic_check', 'Electronic Check'),
-        ('other', 'Other means of Payments')
+        ('other', 'Other Payment Method')
         # ('bank_transfer', 'Bank Transfer'),
         # ('credit_card', 'Credit Card')
     ]
