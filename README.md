@@ -78,30 +78,16 @@ Visit **http://127.0.0.1:8000/** in your browser.
 
 ## 🚀 Deployment
 
-### On Heroku (Recommended)
-1. Install the Heroku CLI:
-   ```bash
-   npm install -g heroku
-   ```
-2. Login to Heroku:
-   ```bash
-   heroku login
-   ```
-3. Create a new Heroku app:
-   ```bash
-   heroku create churn-predictor
-   ```
-4. Deploy the app:
-   ```bash
-   git add .
-   git commit -m "Deploying to Heroku"
-   git push heroku main
-   ```
-5. Visit the deployed app:
-   ```bash
-   heroku open
-   ```
-
+### On Render (Deployment Platform)
+1. Create an account at [Render](https://render.com).
+2. Create a new Web Service on Render.
+3. Connect your GitHub repository containing the Django project.
+4. Configure the deployment environment:
+   - Set **Build Command**: `pip install -r requirements.txt`
+   - Set **Start Command**: `python manage.py runserver 0.0.0.0:8000`
+5. Render will automatically deploy your Django application.
+6. Once deployed, Render will provide you with a public URL to access your app.
+   
 ---
 
 ## 📡 API Endpoints
