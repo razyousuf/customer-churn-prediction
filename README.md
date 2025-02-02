@@ -113,16 +113,6 @@ curl -X POST http://127.0.0.1:8000/api/predict/ -H "Content-Type: application/js
 
 ---
 
-## 👨‍💻 Contributing
-We welcome contributions!
-1. Fork the repository
-2. Create a feature branch (`git checkout -b new-feature`)
-3. Commit changes (`git commit -m "Add new feature"`)
-4. Push to GitHub (`git push origin new-feature`)
-5. Create a Pull Request
-
----
-
 ## 📜 License
 This project is licensed under the **MIT License**.
 
