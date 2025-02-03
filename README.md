@@ -1,6 +1,6 @@
 # Customer Churn Prediction Using ML models and Django
 
-A Django-based web application that predicts customer churn based on input data. The system utilizes **machine learning models** to analyze customer behavior and provides insights into retention strategies.
+A Django-based web application that predicts customer churn based on input data. The system utilizes **machine learning models** to analyze customer behavior and provides insights into retention strategies. Try it here: https://customer-churn-prediction-hutq.onrender.com
 
 ---
 
